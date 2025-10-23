@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>43 International Destinations</title>
+  <style>
+    /* Pure HTML + CSS (all styles contained in this file) */
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa6bf; --accent:#3ddc97; --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: dark;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0; background:linear-gradient(180deg,var(--bg) 0%, #071027 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      display:flex; align-items:center; justify-content:center; padding:36px 18px;
+    }
+    .wrap{width:100%; max-width:var(--maxw);} 
+
+    header{
+      display:flex; gap:18px; align-items:center; margin-bottom:22px;
+    }
+    .logo{
+      width:64px; height:64px; background:linear-gradient(135deg,#0ea5a4,#3ddc97); border-radius:14px; display:grid; place-items:center; font-weight:700; color:#042028; font-size:20px;
+      box-shadow: 0 6px 20px rgba(3,7,18,0.6), inset 0 -6px 18px rgba(255,255,255,0.03);
+    }
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted); font-size:13px}
+
+    .controls{display:flex; gap:12px; margin-top:14px; align-items:center;}
+    .chip{background:var(--glass); padding:8px 12px; border-radius:999px; color:var(--muted); font-size:13px;}
+
+    .grid{
+      display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:18px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius); padding:16px; box-shadow: 0 6px 24px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.03);
+    }
+    .region-title{display:flex; align-items:center; justify-content:space-between; gap:8px}
+    .region-title h2{margin:0;font-size:15px}
+    .region-list{margin-top:10px; padding-left:0; list-style:none; display:grid; gap:8px}
+    .region-list li{display:flex; justify-content:space-between; align-items:center; padding:8px 10px; border-radius:10px; background:rgba(255,255,255,0.01); font-size:14px}
+    .iata{font-family:monospace; font-size:12px; color:var(--muted)}
+
+    footer{margin-top:22px; color:var(--muted); font-size:13px; text-align:center}
+
+    /* responsive tweaks */
+    @media (max-width:520px){
+      header{flex-direction:column; align-items:flex-start}
+      .logo{width:56px;height:56px}
+    }
+
+    /* Print friendly */
+    @media print{
+      body{background:white;color:black}
+      .logo{display:none}
+      .card{box-shadow:none;border:none;background:transparent}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">43</div>
+      <div>
+        <h1>Complete list — 43 International Destinations</h1>
+        <p class="lead">Organized by region with airport IATA codes. Pure HTML + CSS single-file design.</p>
+        <div class="controls">
+          <span class="chip">No JavaScript</span>
+          <span class="chip">Inline styles (single file)</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="region-title"><h2>Asia &amp; Australia</h2><span class="iata">16 destinations</span></div>
+        <ul class="region-list">
+          <li>Bali <span class="iata">DPS</span></li>
+          <li>Bangkok <span class="iata">BKK</span></li>
+          <li>Colombo <span class="iata">CMB</span></li>
+          <li>Dhaka <span class="iata">DAC</span></li>
+          <li>Ho Chi Minh City <span class="iata">SGN</span></li>
+          <li>Hong Kong <span class="iata">HKG</span></li>
+          <li>Kathmandu <span class="iata">KTM</span></li>
+          <li>Kuala Lumpur <span class="iata">KUL</span></li>
+          <li>Maldives <span class="iata">MLE</span></li>
+          <li>Melbourne <span class="iata">MEL</span></li>
+          <li>Phuket <span class="iata">PKT</span></li>
+          <li>Seoul <span class="iata">ICN</span></li>
+          <li>Singapore <span class="iata">SIN</span></li>
+          <li>Sydney <span class="iata">SYD</span></li>
+          <li>Tokyo <span class="iata">HND</span></li>
+          <li>Yangon <span class="iata">RGN</span></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="region-title"><h2>Middle East</h2><span class="iata">8 destinations</span></div>
+        <ul class="region-list">
+          <li>Abu Dhabi <span class="iata">AUH</span></li>
+          <li>Dammam <span class="iata">DMM</span></li>
+          <li>Doha <span class="iata">DOH</span></li>
+          <li>Dubai <span class="iata">DXB</span></li>
+          <li>Jeddah <span class="iata">JED</span></li>
+          <li>Muscat <span class="iata">MCT</span></li>
+          <li>Riyadh <span class="iata">RUH</span></li>
+          <li>Tel Aviv <span class="iata">TLV</span></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="region-title"><h2>Europe &amp; UK</h2><span class="iata">10 destinations</span></div>
+        <ul class="region-list">
+          <li>Amsterdam <span class="iata">AMS</span></li>
+          <li>Birmingham <span class="iata">BHX</span></li>
+          <li>Copenhagen <span class="iata">CPH</span></li>
+          <li>Frankfurt <span class="iata">FRA</span></li>
+          <li>London (Gatwick) <span class="iata">LGW</span></li>
+          <li>London (Heathrow) <span class="iata">LHR</span></li>
+          <li>Milan <span class="iata">MXP</span></li>
+          <li>Paris <span class="iata">CDG</span></li>
+          <li>Vienna <span class="iata">VIE</span></li>
+          <li>Zurich <span class="iata">ZRH</span></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="region-title"><h2>Africa</h2><span class="iata">2 destinations</span></div>
+        <ul class="region-list">
+          <li>Mauritius <span class="iata">MRU</span></li>
+          <li>Nairobi <span class="iata">NBO</span></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="region-title"><h2>North America</h2><span class="iata">7 destinations</span></div>
+        <ul class="region-list">
+          <li>Chicago <span class="iata">ORD</span></li>
+          <li>New York <span class="iata">JFK</span></li>
+          <li>Newark <span class="iata">EWR</span></li>
+          <li>San Francisco <span class="iata">SFO</span></li>
+          <li>Toronto <span class="iata">YYZ</span></li>
+          <li>Vancouver <span class="iata">YVR</span></li>
+          <li>Washington <span class="iata">IAD</span></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      Created with ♥ — single-file HTML + CSS. Print-friendly.
+    </footer>
+  </div>
+</body>
+</html>
